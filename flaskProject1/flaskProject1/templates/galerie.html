@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <title>Titre du document</title>
+    <style>
+      body {
+        background-image: url('https://cybersecuritymag.africa/sites/default/files/2021-09/microsoft-azure-alerte.png');
+        background-color: #fafafa;
+        background-attachment: fixed;
+        background-position: bottom 50px right 200px;
+        background-size: 100% auto;
+}
+      
+
+      img{
+      width:900px;
+      height:900px;
+      position:absolute;
+      top: 160%;
+    }
+    .slideshow{
+border:5px solid white;
+box-shadow:0 0 5px hsla(0,0%,0%,.5);
+overflow:hidden;
+width:900px;
+margin:2rem auto;
+position:relative}
+    
+.slideshow ul{
+
+padding: 66.67% 0 0 0;
+margin:0;
+position:relative
+  
+  }
+  h1 {
+    color: white;
+    
+  }
+    
+    
+.slideshow li{
+  
+top:0;
+left:0;
+animation:slideshow 25s ease infinite;
+position:absolute;
+opacity:0;
+list-style-type:none}
+
+    
+
+.slideshow li:nth-child(2){animation-delay:5s}
+.slideshow li:nth-child(3){animation-delay:10s}
+.slideshow li:nth-child(4){animation-delay:15s}
+.slideshow li:nth-child(5){animation-delay:20s}
+.slideshow li:nth-child(6){animation-delay:25s}
+    
+@keyframes slideshow{
+  
+0%{opacity:0}
+10%{opacity:1}
+20%{opacity:1}
+25%{opacity:0}
+/*50%{opacity:0}*/
+100%{opacity:0}
+  
+  } 
+
+    
+.slideshow span{
+background:rgba(0,0,0,0.7);
+height:40px;
+align-items: center;
+justify-content: center;
+display: flex;
+color:white;
+position:absolute;
+bottom:0;
+right:0;
+left:0}
+    
+
+
+/*****barre progression *****/
+.barre_progression{ 
+  
+position:absolute;
+bottom:40px;
+height:5px;
+background:white;
+animation:barre_progression 25s ease-out infinite;
+  
+}
+    
+/*****animation barre progression *****/    
+@keyframes barre_progression{
+  
+0%,20%,40%,60%,80%,100%{width:0%;opacity:0}
+  
+4%,24%,44%,64%,84%{width:0%;opacity:.3}
+  
+16%,36%,56%,76%,96%{width:100%;opacity:.7}
+  
+17%,37%,57%,77%,97%{width:100%;opacity:.3}
+  
+18%,38%,58%,78%,98%{width:100%;opacity:0}
+
+/*19%,39%,59%,79%,99%{width:100%;opacity:4}*/
+  
+  }
+    </style>
+  </head>
+  <body>
+
+    <h1>Un petit aperçu de nos images</h1>
+    
+
+  <div class="slideshow" method="GET">
+  <ul>
+  <li><img src={{ list_images[1] }} alt><span>Description1</span></li>
+  <li><img src={{ list_images[2] }} alt><span>Description2</span></li>
+  <li><img src={{ list_images[3] }} alt><span>Description3</span></li>
+  </ul>
+  </body>
+</html>
